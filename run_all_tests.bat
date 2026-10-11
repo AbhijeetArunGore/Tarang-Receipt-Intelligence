@@ -1,0 +1,3 @@
+@echo off
+echo Running pytest test suite across all modules...
+python -m pytest -v
