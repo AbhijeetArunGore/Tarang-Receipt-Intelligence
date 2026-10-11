@@ -16,7 +16,7 @@ We built and benchmarked a local receipt intelligence platform utilizing compute
 
 ### 2. Critical Governance Finding: Why Sub-₹2,000 Auto-Approval Must Be Gated
 Our data audit revealed that **89.5% of Tarang's claims fall under ₹2,000**. However, approving claims solely on amount would be financially dangerous:
-1. **Missing Receipts (17.4% in test data):** Older app uploads frequently lost image binaries during mobile sync. Unconditional approval would reimburse claims without any receipt.
+1. **Missing Receipts (16.3% / 31 claims in test data):** Older app uploads frequently lost image binaries during mobile sync. Unconditional approval would reimburse claims without any receipt.
 2. **Duplicate Resubmissions:** Accounts Executive Priya Bhende noted identical bills submitted across consecutive days or with slightly altered amounts.
 3. **Thermal Paper & Tax Non-Compliance:** Unreadable slips and hotel stays lacking mandatory GST tax invoices would be paid without scrutiny.
 
@@ -27,10 +27,10 @@ Our data audit revealed that **89.5% of Tarang's claims fall under ₹2,000**. H
 ### 3. Empirical Performance & Zero False-Approval Evidence
 Benchmarked on an independently verified reference set of 60 representative receipts:
 * **False Approvals (Financial Risk):** **0.0% (0 claims)**. Zero invalid claims were auto-approved; financial leakage exposure is **₹0.00**.
-* **Straight-Through Processing (STP):** **11.6%** in test batch fully automated with zero human touch.
-* **Assisted Review (Copilot):** For the remaining 88.4% of claims routed to review, all 5 bill fields and validation findings are pre-populated, reducing clerk review time from 3.5 minutes to under 1.0 minute per claim.
-* **Extraction Accuracies:** Normalized Vendor (50.0%), GSTIN (58.3%), Bill Date (35.0%), Bill Amount (23.3%), Bill Number (21.7%). Faded thermal slips and dot-matrix characters account for primary extraction failures, safely handled by review fallback.
-* **Inference Latency:** Median 715 ms per receipt on local CPU.
+* **Straight-Through Processing (STP):** **13.7%** in test batch (26 claims) fully automated with zero human touch.
+* **Assisted Review (Copilot):** For the remaining 86.3% of claims routed to review, all 5 bill fields and validation findings are pre-populated, reducing clerk review time from 3.5 minutes to under 1.0 minute per claim.
+* **Extraction Accuracies:** Normalized Vendor (50.0%), GSTIN (58.3%), Bill Date (36.7%), Bill Amount (28.3%), Bill Number (26.7%). Faded thermal slips and dot-matrix characters account for primary extraction failures, safely handled by review fallback.
+* **Inference Latency:** Median 713 ms per receipt on local CPU.
 
 ---
 

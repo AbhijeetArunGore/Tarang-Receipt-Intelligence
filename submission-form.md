@@ -21,14 +21,14 @@ The platform supports weekly reimbursement processing for 160 medical representa
 
 ### The Measured Numbers
 1. **Total Test Claims Processed:** **190 claims** (`claims_test.csv`).
-2. **Automated Approvals (Straight-Through Processing):** **22 claims (11.6%)** automatically approved with zero human touch.
-3. **Routed to Human Review:** **168 claims (88.4%)** routed to finance clerks for verification (including 33 claims with missing server uploads, high-value claims ≥ ₹2,000, and unreadable thermal slips).
+2. **Automated Approvals (Straight-Through Processing):** **26 claims (13.7%)** automatically approved with zero human touch.
+3. **Routed to Human Review:** **164 claims (86.3%)** routed to finance clerks for verification (including 31 claims with missing server uploads, high-value claims ≥ ₹2,000, and unreadable thermal slips).
 4. **Field Extraction Benchmark Accuracy (on 60 verified receipts):**
    - Vendor Name (Normalized): **50.0%**
    - GSTIN (Normalized): **58.3%**
-   - Bill Date (Normalized): **35.0%**
-   - Bill Amount (Normalized): **23.3%**
-   - Bill Number (Normalized): **21.7%**
+   - Bill Date (Normalized): **36.7%**
+   - Bill Amount (Normalized): **28.3%**
+   - Bill Number (Normalized): **26.7%**
 5. **False Approval Rate (Financial Risk):** **0.0% (0 claims)** across all evaluated reference receipts. Zero invalid claims were paid out.
 6. **Financial Exposure from Erroneous Approvals:** **₹0.00**.
 7. **Monthly Staff Capacity Released:** **~109 hours / month** across 2,400 monthly claims (saving 2.5 minutes on assisted pre-filled reviews and 3.5 minutes on auto-approvals).
@@ -43,13 +43,13 @@ Based on empirical performance observed across our verified 60-receipt benchmark
 | Field / Output | Expected Normalized Match Accuracy Range | Evaluation Basis & Distribution Context |
 | :--- | :--- | :--- |
 | **Vendor Name** | **45.0% – 55.0%** | Backed by Nagpur regional merchant dictionary and header layout anchors; limited by severe thermal paper fading. |
-| **Bill Date** | **30.0% – 40.0%** | Normalized to ISO `YYYY-MM-DD` within ±3-day tolerance; constrained by ambiguous date stamps and faint print. |
-| **Bill Number** | **20.0% – 28.0%** | Anchored on `Invoice`, `Bill No`, `Ticket` keywords; affected by non-standard receipt layouts and missing numbers on local transit. |
+| **Bill Date** | **32.0% – 42.0%** | Normalized to ISO `YYYY-MM-DD` within ±3-day tolerance; constrained by ambiguous date stamps and faint print. |
+| **Bill Number** | **22.0% – 30.0%** | Anchored on `Invoice`, `Bill No`, `Ticket` keywords; affected by non-standard receipt layouts and missing numbers on local transit. |
 | **GSTIN** | **52.0% – 62.0%** | Exact 15-character checksum and regex validation. High accuracy because small vendors have no GSTIN (correctly left null), while printed GSTINs are detected. |
-| **Bill Amount** | **22.0% – 30.0%** | Enforces strict ±₹10 tolerance. Constrained by thermal receipts and multi-item subtotal vs grand total ambiguity. |
+| **Bill Amount** | **25.0% – 33.0%** | Enforces strict ±₹10 tolerance. Constrained by thermal receipts and multi-item subtotal vs grand total ambiguity. |
 | **Approve / Review Decision** | **85.0% – 92.0% Agreement** | High agreement with conservative policy ground truth because the decision engine reliably defaults to human review whenever extraction is uncertain. |
 
-*Distribution Shift Note:* In `claims_test.csv`, **17.4% (33 claims)** completely lack physical images on the server due to mobile sync failures. On these claims, field accuracy will be 0.0% (serialized as blank per schema), but decision accuracy will be 100% correct because all 33 are appropriately routed to `review`.
+*Distribution Shift Note:* In `claims_test.csv`, **16.3% (31 claims)** completely lack physical images on the server due to mobile sync failures. On these claims, field accuracy will be 0.0% (serialized as blank per schema), but decision accuracy will be 100% correct because all 31 are appropriately routed to `review`.
 
 ---
 
@@ -58,7 +58,7 @@ Based on empirical performance observed across our verified 60-receipt benchmark
 We verified system correctness through empirical, reproducible testing rather than theoretical assumptions:
 1. **Stratified Reference Set (`reports/reference_set.csv`):** Sampled 60 real receipts across all 6 expense categories (Fuel, Food, Lodging, Local travel, Courier, Parking) from historical training data. Transcriptions were independently cross-checked against actual image properties.
 2. **Empirical Evaluation Pipeline (`scripts/evaluate.py`):** Tested the full OCR and policy pipeline on the reference set, generating `reports/metrics.json` and `reports/evaluation.md`.
-3. **Automated Test Suite (29 passing pytest tests):**
+3. **Automated Test Suite (61 passing pytest tests):**
    - Data loading & deterministic image mapping (`tests/test_data.py`)
    - Normalizers for currency, multi-format dates, GSTINs, and strings (`tests/test_normalization.py`)
    - Safe CV loading, orientation fix, and corrupt file rejection (`tests/test_image_processing.py`)
@@ -80,7 +80,7 @@ In his initial email, Finance Controller Nilesh Agrawal requested:
 
 We **strongly challenged** unconditional sub-₹2,000 automatic approval based on the real data:
 1. **89.5% of all Tarang claims fall under ₹2,000.** Unconditional approval would effectively blindfold Finance to 9 out of 10 expenses.
-2. **Missing Receipts:** 17.4% of test claims have no receipt image on the server. Unconditional approval would auto-pay unverified claims.
+2. **Missing Receipts:** 16.3% of test claims (31 claims) have no receipt image on the server. Unconditional approval would auto-pay unverified claims.
 3. **Duplicate Exploitation:** As Accounts Executive Priya Bhende reported, duplicate bills (such as Hotel Shubham) are submitted with slight amount differences.
 4. **Policy v3.2 Non-Compliance:** Unconditional approval would bypass vehicle number checks on fuel bills and mandatory GSTINs on lodging stays.
 
@@ -98,13 +98,13 @@ Any failure safely routes to human review.
 ## Question 6: What is Wrong with Your Implementation or the Supplied Data?
 
 ### Data Issues Identified in Supplied Pack
-1. **Server Image Upload Sync Failure:** 33 out of 190 claims in `claims_test.csv` (17.4%) and 10 claims in `claims_train.csv` (3.5%) do not exist in `images/`. The mobile app stored local device paths (`/storage/emulated/0/...`) before upload confirmation.
+1. **Server Image Upload Sync Failure:** 31 out of 190 claims in `claims_test.csv` (16.3%) and 10 claims in `claims_train.csv` (3.5%) do not exist in `images/`. The mobile app stored local device paths (`/storage/emulated/0/...`) before upload confirmation.
 2. **Free-Hand String Contamination:** Field reps typed amounts as `"Rs 2352"`, `"3,539.00"`, `"Rs. 30"`, rather than numeric floats, requiring custom parsing.
 3. **Noisy Historical Clerk Labels:** Historical clerk transcriptions in `claims_train.csv` contain human errors, typos (e.g. `"Krisnha Hotel Comforts"`), and admitted fatigue (clerk ignoring daily parking slips).
 4. **Thermal Paper Degradation:** Receipts from local fuel stations in Nagpur exhibit heavy fading, faint print, and severed dot-matrix digits.
 
 ### Implementation Limitations
-1. **Local OCR Character Substitution on Faded Receipts:** Tesseract 5.4 struggles with low-contrast, faded thermal slips, leading to a conservative straight-through processing rate (11.6% auto-approved; remainder routed to review).
+1. **Local OCR Character Substitution on Faded Receipts:** Tesseract 5.4 struggles with low-contrast, faded thermal slips, leading to a conservative straight-through processing rate (13.7% auto-approved; remainder routed to review).
 2. **Vendor Name Formatting Variance:** While known merchants are mapped via dictionary, unindexed small dhabas are captured from top lines and may include noise like "Cash Memo".
 3. **Devanagari / Regional Script Support:** Slips containing purely Marathi/Hindi printed script are unsupported by the English OCR model.
 
@@ -155,7 +155,7 @@ Any failure safely routes to human review.
 ### Screen Recording
 * **Script:** Completed in `docs/RECORDING_SCRIPT.md` (3-minute timed script).
 * **Recording Status:** [Verified Demonstration Video Pending Upload by User / Placeholder]
-* **Demo URL:** `https://youtu.be/tarang-receipt-intelligence-demo` *(Placeholder: record and attach final YouTube/Loom URL as instructed in submission guidelines)*
+* **Demo URL:** `[PENDING USER RECORDING: record demo using docs/RECORDING_SCRIPT.md and insert URL here]`
 
 ---
 
@@ -168,11 +168,11 @@ If a new engineer or finance operator takes over this repository on Monday morni
    pip install -r requirements.txt
    # Verify Tesseract OCR is installed at C:\Users\abhis\AppData\Local\Programs\Tesseract-OCR\tesseract.exe
    python scripts/predict_batch.py    # Generates predictions.csv
-   pytest -v                          # Runs all 29 automated tests
+   pytest -v                          # Runs all 61 automated tests
    streamlit run app/ui.py            # Launches web testing dashboard
    uvicorn app.api:app --reload       # Launches FastAPI service on port 8000
    ```
 2. **How Decisions Are Made (The Safety Invariant):**  
    The system will **never** auto-approve a claim unless: (a) receipt image is resolved, (b) amount matches within ₹10, (c) date is within 3 days, (d) no duplicate invoice exists, and (e) policy limits pass. If any check fails, it safely defaults to `review`.
 3. **The Urgent Fix Required for Field IT (Sameer Joshi):**  
-   17.4% of claims fail because the mobile app saves the local file path before the photo finishes uploading to the server. Issue a patch to the Android app ensuring upload confirmation before claim database submission.
+   16.3% of test claims (31 claims) fail because the mobile app saves the local file path before the photo finishes uploading to the server. Issue a patch to the Android app ensuring upload confirmation before claim database submission.

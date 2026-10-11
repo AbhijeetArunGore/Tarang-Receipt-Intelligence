@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-green)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.32+-red)
-![Tests](https://img.shields.io/badge/Tests-Passing%20(29%2F29)-brightgreen)
+![Tests](https://img.shields.io/badge/Tests-Passing%20(61%2F61)-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
 A production-grade, reproducible receipt intelligence and expense audit platform developed for **Tarang Pharma Distribution** (Nagpur, Maharashtra, India). The system extracts five bill fields from photographed receipts, reconciles values against representative claims and employee records, enforces Tarang Field Expense Policy v3.2, and issues conservative `approve` or `review` decisions.
@@ -140,7 +140,7 @@ python scripts/evaluate.py
 ### 5.4 Run Automated Test Suite
 ```bash
 pytest -v
-# Executes all 29 unit and integration tests
+# Executes all 61 unit and integration tests
 ```
 
 ---
@@ -190,15 +190,15 @@ Opens interactive dashboard at `http://localhost:8501` featuring receipt upload 
 
 Evaluated on an independently verified reference set of 60 representative receipts:
 * **False Approvals (Financial Leakage Risk):** **0.0% (0 claims)**
-* **Straight-Through Processing (STP Rate):** **11.6%** in test batch fully automated
-* **Decision Agreement Accuracy:** **26.7%** exact (reflecting safe review routing on faded receipts)
+* **Straight-Through Processing (STP Rate):** **13.7%** in test batch (26 claims) fully automated
+* **Decision Agreement Accuracy:** **31.7%** exact (reflecting safe review routing on faded receipts)
 * **Normalized Field Accuracies:**
   - Vendor Name: **50.0%**
   - GSTIN: **58.3%**
-  - Bill Date: **35.0%**
-  - Bill Amount: **23.3%**
-  - Bill Number: **21.7%**
-* **Inference Latency:** Median **714.7 ms** per receipt.
+  - Bill Date: **36.7%**
+  - Bill Amount: **28.3%**
+  - Bill Number: **26.7%**
+* **Inference Latency:** Median **713.1 ms** per receipt.
 * **Marginal Software Cost:** **₹0.00**
 
 ---
