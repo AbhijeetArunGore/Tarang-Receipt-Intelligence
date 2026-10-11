@@ -152,17 +152,21 @@ class ReceiptExtractor:
 
     def _extract_date(self, lines: List[str], text: str) -> Tuple[Optional[str], FieldMetadata]:
         """Extract bill invoice date, avoiding due/print dates."""
-        # First check anchor lines: 'Date:', 'Bill Date:', 'Invoice Date:', 'Dt:'
+        # 1. First check anchor lines: 'Date:', 'Bill Date:', 'Invoice Date:', 'Dt:', 'Date_'
+        anchor_patterns = [
+            r"(?i)\b(?:bill\s*date|invoice\s*date|inv\s*date|date|dt)[\s\:\_\-\.]*(\d{1,4}[\/\-\.]\d{1,2}[\/\-\.]\d{2,4})",
+            r"(?i)\b(?:dated)[\s\:\_\-\.]*(\d{1,4}[\/\-\.]\d{1,2}[\/\-\.]\d{2,4})",
+        ]
         for line in lines:
-            if re.search(r"(?i)\b(?:bill\s*date|invoice\s*date|inv\s*date|dated?|dt)\b", line):
-                # Search for date pattern in this line
-                d_cand = re.search(r"(\d{1,4}[\/\-\.]\d{1,2}[\/\-\.]\d{2,4})", line)
-                if d_cand:
-                    iso, err = normalize_date(d_cand.group(1))
+            for pat in anchor_patterns:
+                m = re.search(pat, line)
+                if m:
+                    cand = m.group(1).strip()
+                    iso, err = normalize_date(cand)
                     if iso:
                         return iso, FieldMetadata(status="extracted", confidence=0.95, evidence=line)
 
-        # Scan lines from top for any date
+        # 2. Scan lines from top for any date
         for line in lines[:10]:
             d_cand = re.search(r"\b(\d{1,4}[\/\-\.]\d{1,2}[\/\-\.]\d{2,4})\b", line)
             if d_cand:
@@ -170,7 +174,7 @@ class ReceiptExtractor:
                 if iso:
                     return iso, FieldMetadata(status="extracted", confidence=0.85, evidence=line)
 
-        # Global search
+        # 3. Global search
         g_cand = re.search(r"\b(\d{1,4}[\/\-\.]\d{1,2}[\/\-\.]\d{2,4})\b", text)
         if g_cand:
             iso, err = normalize_date(g_cand.group(1))
@@ -182,8 +186,9 @@ class ReceiptExtractor:
     def _extract_bill_number(self, lines: List[str], text: str) -> Tuple[Optional[str], FieldMetadata]:
         """Extract invoice or bill number using anchor keywords."""
         patterns = [
-            r"(?i)\b(?:invoice|inv|bill|receipt|rcpt|memo|ticket|awb)\s*(?:no\.?|#|num|number)?\s*[:\-\.]?\s*([A-Z0-9\/\-_]{2,20})\b",
-            r"(?i)\b(?:inv|bill)\s*#\s*([A-Z0-9\/\-_]+)\b",
+            r"(?i)\b(?:invoice|inv|bill|receipt|rcpt|memo|ticket|awb|token)[\s\.]*(?:no\.?|#|num|number)?[\s\:\-\._]*([A-Z0-9\/\-_]{2,20})",
+            r"(?i)\b(?:inv|bill|ticket|rcpt)\s*#\s*([A-Z0-9\/\-_]+)",
+            r"(?i)\b(?:no|s\.?no|sr\.?no)[\s\:\-\._]+([0-9]{3,10})\b",
         ]
         for line in lines:
             for pat in patterns:
@@ -191,23 +196,23 @@ class ReceiptExtractor:
                 if m:
                     cand = m.group(1).strip()
                     # Filter out common noise words captured accidentally
-                    if cand.lower() not in ("date", "cash", "original", "gst", "total", "rupees", "paid"):
+                    if cand.lower() not in ("date", "cash", "original", "gst", "total", "rupees", "paid", "amount", "order"):
                         clean_no = normalize_bill_number(cand)
-                        if clean_no:
+                        if clean_no and len(clean_no) >= 2:
                             return clean_no, FieldMetadata(status="extracted", confidence=0.92, evidence=line)
 
         return None, FieldMetadata(status="missing", confidence=None, evidence="")
 
     def _extract_amount(self, lines: List[str], text: str) -> Tuple[Optional[float], FieldMetadata]:
         """Extract final payable total amount, distinguishing from subtotals and tax components."""
-        # 1. Look for explicit total anchors: 'Grand Total', 'Total Amount', 'Net Payable', 'Total Rs'
+        # 1. Look for explicit total anchors on the same line
         explicit_patterns = [
             r"(?i)\b(?:grand\s+total|net\s+payable|total\s+amount|total\s+amt|final\s+total|total\s+due|amount\s+payable)\b[^\d\n]*([0-9,]+(?:\.[0-9]{1,2})?)",
             r"(?i)\b(?:total)\b[^\d\n]*([0-9,]+(?:\.[0-9]{1,2})?)",
             r"(?i)\b(?:paid|cash|amount|amt)\b[^\d\n]*([0-9,]+(?:\.[0-9]{1,2})?)",
         ]
 
-        # Scan from bottom to top for total anchors
+        # Scan from bottom to top for same-line anchors
         for line in reversed(lines):
             for pat in explicit_patterns:
                 m = re.search(pat, line)
@@ -216,7 +221,17 @@ class ReceiptExtractor:
                     if amt is not None and amt > 0:
                         return amt, FieldMetadata(status="extracted", confidence=0.90, evidence=line)
 
-        # 2. Search for currency symbols / 'Rs' across lines
+        # 2. Multi-line lookahead: if line i has Total/Amount anchor, check line i+1 and i+2
+        for i, line in enumerate(lines):
+            if re.search(r"(?i)\b(?:grand\s+total|total\s+rs|total|net\s+payable|amount\s+due|amount)\b", line):
+                for lookahead in (1, 2):
+                    if i + lookahead < len(lines):
+                        next_line = lines[i + lookahead]
+                        amt = normalize_amount(next_line)
+                        if amt is not None and amt > 0:
+                            return amt, FieldMetadata(status="extracted", confidence=0.88, evidence=f"{line} -> {next_line}")
+
+        # 3. Search for currency symbols / 'Rs' across lines
         currency_amounts = []
         for line in lines:
             m = re.findall(r"(?i)(?:rs\.?|inr|₹)\s*([0-9,]+(?:\.[0-9]{1,2})?)", line)
@@ -226,10 +241,16 @@ class ReceiptExtractor:
                     currency_amounts.append((a, line))
 
         if currency_amounts:
-            # Prefer the last or maximum currency amount if near the bottom
-            # (In invoices, grand total is usually near the bottom)
             final_amt, line_ev = currency_amounts[-1]
             return final_amt, FieldMetadata(status="extracted", confidence=0.75, evidence=line_ev)
+
+        # 4. Fallback: inspect lines from bottom up for trailing numbers (often grand total)
+        for line in reversed(lines[:15]):
+            m = re.search(r"[\|\:\-\s]+([0-9]{2,6}(?:\.[0-9]{1,2})?)\s*$", line)
+            if m:
+                a = normalize_amount(m.group(1))
+                if a is not None and a > 0:
+                    return a, FieldMetadata(status="extracted", confidence=0.65, evidence=line)
 
         return None, FieldMetadata(status="missing", confidence=None, evidence="")
 

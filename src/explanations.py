@@ -28,7 +28,7 @@ class ExplanationGenerator:
         # Decision is 'review': prioritize specific blocking errors
         reasons: List[str] = []
 
-        if image_status_msg and "missing" in image_status_msg.lower():
+        if image_status_msg and any(w in image_status_msg.lower() for w in ["missing", "not found", "upload failed", "unreadable", "degraded", "not exist"]):
             return "Review required: receipt image is unreadable or missing from upload."
 
         if validation_result and validation_result.has_blocking_errors:
