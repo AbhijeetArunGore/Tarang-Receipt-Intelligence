@@ -102,7 +102,7 @@ with col_left:
     if uploaded_file is not None:
         try:
             image_to_process = Image.open(uploaded_file)
-            st.image(image_to_process, caption="Receipt Preview", use_container_width=True)
+            st.image(image_to_process, caption="Receipt Preview")
         except Exception as e:
             st.error(f"Failed to display image: {e}")
 
@@ -117,84 +117,88 @@ with col_right:
         elif not is_ocr_ready:
             st.error("OCR Provider is not available. Please install Tesseract or configure an API key.")
         else:
-            with st.spinner("Extracting bill fields and running policy audit..."):
-                with StopWatch() as timer:
-                    # 1. Image preprocessing
-                    pil_img = ImageProcessor.load_image(image_to_process)
+            try:
+                with st.spinner("Extracting bill fields and running policy audit..."):
+                    with StopWatch() as timer:
+                        # 1. Image preprocessing
+                        pil_img = ImageProcessor.load_image(image_to_process)
 
-                    # 2. OCR extraction
-                    ocr_res = ocr_provider.extract_text(pil_img)
-                    extractor = ReceiptExtractor()
-                    extracted = extractor.extract(ocr_res)
+                        # 2. OCR extraction
+                        ocr_res = ocr_provider.extract_text(pil_img)
+                        extractor = ReceiptExtractor()
+                        extracted = extractor.extract(ocr_res)
 
-                    # 3. Duplicate check
-                    detector = DuplicateDetector()
-                    dup_res = detector.check_duplicate(
-                        current_claim_id=claim_id_input,
-                        image=pil_img,
-                        vendor_name=extracted.fields.vendor_name,
-                        bill_number=extracted.fields.bill_number,
-                    )
+                        # 3. Duplicate check
+                        detector = DuplicateDetector()
+                        dup_res = detector.check_duplicate(
+                            current_claim_id=claim_id_input,
+                            image=pil_img,
+                            vendor_name=extracted.fields.vendor_name,
+                            bill_number=extracted.fields.bill_number,
+                        )
 
-                    # 4. Validation
-                    validator = ClaimValidator(employees_df=emp_df)
-                    claim_dict = {
-                        "claim_id": claim_id_input,
-                        "emp_id": emp_id_input,
-                        "category": category_input,
-                        "amount_claimed": amount_input,
-                        "amount_claimed_num": normalize_amount(amount_input),
-                        "expense_date": date_input,
-                        "vendor": vendor_typed,
-                    }
-                    val_res = validator.validate(claim_dict, extracted, duplicate_check=dup_res, image_resolved=True)
+                        # 4. Validation
+                        validator = ClaimValidator(employees_df=emp_df)
+                        claim_dict = {
+                            "claim_id": claim_id_input,
+                            "emp_id": emp_id_input,
+                            "category": category_input,
+                            "amount_claimed": amount_input,
+                            "amount_claimed_num": normalize_amount(amount_input),
+                            "expense_date": date_input,
+                            "vendor": vendor_typed,
+                        }
+                        val_res = validator.validate(claim_dict, extracted, duplicate_check=dup_res, image_resolved=True)
 
-                    # 5. Policy check
-                    emp_info = validator.employee_index.get(emp_id_input)
-                    policy_engine = ExpensePolicyEngine()
-                    pol_res = policy_engine.evaluate(claim_dict, extracted, employee_info=emp_info)
+                        # 5. Policy check
+                        emp_info = validator.employee_index.get(emp_id_input)
+                        policy_engine = ExpensePolicyEngine()
+                        pol_res = policy_engine.evaluate(claim_dict, extracted, employee_info=emp_info)
 
-                    # 6. Decision
-                    decision_engine = DecisionEngine(validator=validator, policy_engine=policy_engine)
-                    decision = decision_engine.decide(claim_dict, extracted, val_res, pol_res, image_resolved=True)
+                        # 6. Decision
+                        decision_engine = DecisionEngine(validator=validator, policy_engine=policy_engine)
+                        decision = decision_engine.decide(claim_dict, extracted, val_res, pol_res, image_resolved=True)
 
-            # Display Decision Banner
-            st.markdown("---")
-            if decision.decision == "approve":
-                st.success(f"### Decision: ✅ APPROVE (Straight-Through Automated)")
-            else:
-                st.warning(f"### Decision: 🔍 REVIEW (Route to Finance Clerk)")
+                # Display Decision Banner
+                st.markdown("---")
+                if decision.decision == "approve":
+                    st.success(f"### Decision: ✅ APPROVE (Straight-Through Automated)")
+                else:
+                    st.warning(f"### Decision: 🔍 REVIEW (Route to Finance Clerk)")
 
-            st.info(f"**Audit Rationale:** {decision.reason}")
+                st.info(f"**Audit Rationale:** {decision.reason}")
 
-            # Extracted Fields Table
-            st.markdown("#### 📋 Extracted Bill Fields")
-            fields_data = [
-                {"Field": "Vendor Name", "Extracted Value": extracted.fields.vendor_name or "—", "Claimed Value": vendor_typed},
-                {"Field": "Bill Date", "Extracted Value": extracted.fields.bill_date or "—", "Claimed Value": date_input},
-                {"Field": "Bill Number", "Extracted Value": extracted.fields.bill_number or "—", "Claimed Value": "—"},
-                {"Field": "GSTIN", "Extracted Value": extracted.fields.gstin or "—", "Claimed Value": "—"},
-                {"Field": "Total Amount (₹)", "Extracted Value": f"₹{extracted.fields.bill_amount:.2f}" if extracted.fields.bill_amount is not None else "—", "Claimed Value": f"₹{normalize_amount(amount_input):.2f}" if normalize_amount(amount_input) else amount_input},
-            ]
-            st.dataframe(pd.DataFrame(fields_data), use_container_width=True)
+                # Extracted Fields Table
+                st.markdown("#### 📋 Extracted Bill Fields")
+                fields_data = [
+                    {"Field": "Vendor Name", "Extracted Value": extracted.fields.vendor_name or "—", "Claimed Value": vendor_typed},
+                    {"Field": "Bill Date", "Extracted Value": extracted.fields.bill_date or "—", "Claimed Value": date_input},
+                    {"Field": "Bill Number", "Extracted Value": extracted.fields.bill_number or "—", "Claimed Value": "—"},
+                    {"Field": "GSTIN", "Extracted Value": extracted.fields.gstin or "—", "Claimed Value": "—"},
+                    {"Field": "Total Amount (₹)", "Extracted Value": f"₹{extracted.fields.bill_amount:.2f}" if extracted.fields.bill_amount is not None else "—", "Claimed Value": f"₹{normalize_amount(amount_input):.2f}" if normalize_amount(amount_input) else amount_input},
+                ]
+                st.dataframe(pd.DataFrame(fields_data), use_container_width=True)
 
-            # Validation & Policy Findings
-            st.markdown("#### 🛡️ Compliance & Validation Findings")
-            if val_res.findings:
-                for f in val_res.findings:
-                    if f.severity.value == "ERROR":
-                        st.error(f"❌ **{f.rule_id}:** {f.message}")
-                    else:
-                        st.warning(f"⚠️ **{f.rule_id}:** {f.message}")
-            else:
-                st.success("✅ All claim-to-receipt reconciliation checks passed.")
+                # Validation & Policy Findings
+                st.markdown("#### 🛡️ Compliance & Validation Findings")
+                if val_res.findings:
+                    for f in val_res.findings:
+                        if f.severity.value == "ERROR":
+                            st.error(f"❌ **{f.rule_id}:** {f.message}")
+                        else:
+                            st.warning(f"⚠️ **{f.rule_id}:** {f.message}")
+                else:
+                    st.success("✅ All claim-to-receipt reconciliation checks passed.")
 
-            if pol_res.evaluations:
-                for ev in pol_res.evaluations:
-                    if not ev.passed:
-                        st.warning(f"📌 **{ev.rule_name}:** {ev.reason}")
+                if pol_res.evaluations:
+                    for ev in pol_res.evaluations:
+                        if not ev.passed:
+                            st.warning(f"📌 **{ev.rule_name}:** {ev.reason}")
 
-            st.caption(f"⏱️ Processing Latency: {timer.elapsed_ms:.1f} ms | Provider: {ocr_provider.__class__.__name__}")
+                st.caption(f"⏱️ Processing Latency: {timer.elapsed_ms:.1f} ms | Provider: {ocr_provider.__class__.__name__}")
+            except Exception as e:
+                st.error(f"❌ An error occurred during receipt processing: {str(e)}")
 
     else:
         st.info("Upload a receipt and click **Audit & Verify Receipt** to view extraction and policy reconciliation.")
+
