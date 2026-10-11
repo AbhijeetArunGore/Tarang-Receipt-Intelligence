@@ -15,16 +15,28 @@ from typing import Any, Dict, List, Optional
 
 from PIL import Image
 
-from src.config import (
-    OCR_PROVIDER,
-    TESSERACT_CMD,
-    VISION_API_ENDPOINT,
-    VISION_API_KEY,
-    VISION_MAX_RETRIES,
-    VISION_MODEL_ID,
-    VISION_REQUEST_TIMEOUT,
-)
-from src.observability import StopWatch, logger
+try:
+    from src.config import (
+        OCR_PROVIDER,
+        TESSERACT_CMD,
+        VISION_API_ENDPOINT,
+        VISION_API_KEY,
+        VISION_MAX_RETRIES,
+        VISION_MODEL_ID,
+        VISION_REQUEST_TIMEOUT,
+    )
+    from src.observability import StopWatch, logger
+except (ImportError, ModuleNotFoundError):
+    from config import (  # type: ignore
+        OCR_PROVIDER,
+        TESSERACT_CMD,
+        VISION_API_ENDPOINT,
+        VISION_API_KEY,
+        VISION_MAX_RETRIES,
+        VISION_MODEL_ID,
+        VISION_REQUEST_TIMEOUT,
+    )
+    from observability import StopWatch, logger  # type: ignore
 
 
 @dataclass

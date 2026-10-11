@@ -13,14 +13,24 @@ from typing import Dict, List, Optional, Tuple
 
 import pandas as pd
 
-from src.config import (
-    CLAIMS_TEST_PATH,
-    CLAIMS_TRAIN_PATH,
-    EMPLOYEES_PATH,
-    IMAGES_DIR,
-    SAMPLE_SUBMISSION_PATH,
-)
-from src.observability import logger
+try:
+    from src.config import (
+        CLAIMS_TEST_PATH,
+        CLAIMS_TRAIN_PATH,
+        EMPLOYEES_PATH,
+        IMAGES_DIR,
+        SAMPLE_SUBMISSION_PATH,
+    )
+    from src.observability import logger
+except (ImportError, ModuleNotFoundError):
+    from config import (  # type: ignore
+        CLAIMS_TEST_PATH,
+        CLAIMS_TRAIN_PATH,
+        EMPLOYEES_PATH,
+        IMAGES_DIR,
+        SAMPLE_SUBMISSION_PATH,
+    )
+    from observability import logger  # type: ignore
 
 
 class ImageResolutionStatus(str, Enum):

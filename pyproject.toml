@@ -26,7 +26,20 @@ dependencies = [
     "python-multipart>=0.0.9",
 ]
 
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*", "app*"]
+
+[tool.pyright]
+extraPaths = ["."]
+include = ["src", "app", "tests", "scripts"]
+
+[tool.pyrefly]
+search-path = ["."]
+project-includes = ["src", "app", "tests", "scripts"]
+
 [tool.pytest.ini_options]
+pythonpath = ["."]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 addopts = "-v --tb=short"

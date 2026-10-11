@@ -1,0 +1,2 @@
+search-path = ["."]
+project-includes = ["src", "app", "tests", "scripts"]
