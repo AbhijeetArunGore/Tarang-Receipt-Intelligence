@@ -2,9 +2,9 @@
   "evaluation_summary": {
     "total_evaluated_receipts": 60,
     "ocr_provider": "TesseractOCRProvider",
-    "average_latency_ms": 819.46,
-    "median_latency_ms": 714.73,
-    "p95_latency_ms": 1502.06
+    "average_latency_ms": 814.79,
+    "median_latency_ms": 713.06,
+    "p95_latency_ms": 1465.46
   },
   "field_metrics": {
     "vendor_name": {
@@ -48,13 +48,13 @@
     "bill_date": {
       "field_name": "bill_date",
       "total_evaluated": 60,
-      "extracted_count": 23,
-      "coverage": 0.3833,
-      "exact_match_count": 21,
-      "exact_match_accuracy": 0.35,
-      "normalized_match_count": 21,
-      "normalized_accuracy": 0.35,
-      "error_count": 39,
+      "extracted_count": 24,
+      "coverage": 0.4,
+      "exact_match_count": 22,
+      "exact_match_accuracy": 0.3667,
+      "normalized_match_count": 22,
+      "normalized_accuracy": 0.3667,
+      "error_count": 38,
       "error_examples": [
         {
           "index": 0,
@@ -77,22 +77,22 @@
           "reference": "2026-07-04"
         },
         {
-          "index": 4,
+          "index": 6,
           "predicted": "",
-          "reference": "2026-06-24"
+          "reference": "2026-06-20"
         }
       ]
     },
     "bill_number": {
       "field_name": "bill_number",
       "total_evaluated": 60,
-      "extracted_count": 30,
-      "coverage": 0.5,
-      "exact_match_count": 13,
-      "exact_match_accuracy": 0.2167,
-      "normalized_match_count": 13,
-      "normalized_accuracy": 0.2167,
-      "error_count": 47,
+      "extracted_count": 35,
+      "coverage": 0.5833,
+      "exact_match_count": 16,
+      "exact_match_accuracy": 0.2667,
+      "normalized_match_count": 16,
+      "normalized_accuracy": 0.2667,
+      "error_count": 44,
       "error_examples": [
         {
           "index": 0,
@@ -162,17 +162,17 @@
     "bill_amount": {
       "field_name": "bill_amount",
       "total_evaluated": 60,
-      "extracted_count": 17,
-      "coverage": 0.2833,
-      "exact_match_count": 14,
-      "exact_match_accuracy": 0.2333,
-      "normalized_match_count": 14,
-      "normalized_accuracy": 0.2333,
-      "error_count": 46,
+      "extracted_count": 45,
+      "coverage": 0.75,
+      "exact_match_count": 15,
+      "exact_match_accuracy": 0.25,
+      "normalized_match_count": 17,
+      "normalized_accuracy": 0.2833,
+      "error_count": 43,
       "error_examples": [
         {
           "index": 0,
-          "predicted": "",
+          "predicted": "2.0",
           "reference": "346.0"
         },
         {
@@ -187,12 +187,12 @@
         },
         {
           "index": 3,
-          "predicted": "",
+          "predicted": "2.0",
           "reference": "200.0"
         },
         {
           "index": 4,
-          "predicted": "",
+          "predicted": "50.0",
           "reference": "210.0"
         }
       ]
@@ -202,17 +202,17 @@
     "total_claims": 60,
     "actual_approve_count": 48,
     "actual_review_count": 12,
-    "predicted_approve_count": 4,
-    "predicted_review_count": 56,
-    "true_approvals": 4,
+    "predicted_approve_count": 7,
+    "predicted_review_count": 53,
+    "true_approvals": 7,
     "false_approvals": 0,
     "true_reviews": 12,
-    "false_reviews": 44,
-    "accuracy": 0.2667,
+    "false_reviews": 41,
+    "accuracy": 0.3167,
     "precision_approve": 1.0,
-    "recall_approve": 0.0833,
-    "straight_through_processing_rate": 0.0667,
-    "human_review_rate": 0.9333,
+    "recall_approve": 0.1458,
+    "straight_through_processing_rate": 0.1167,
+    "human_review_rate": 0.8833,
     "amount_weighted_false_approval_exposure_inr": 0.0
   }
 }

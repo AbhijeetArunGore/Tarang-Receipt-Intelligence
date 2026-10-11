@@ -3,189 +3,189 @@ CLM-31086,New Highway Service Station,2026-07-18,962229,,300.0,approve,Receipt a
 CLM-31087,Green Leafr,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31088,"Nagpur Road, Wardha",2026-07-11,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31090,14/7/2026,2026-07-14,,,220.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
-CLM-31091,Sai Ram Tea & Snacks,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31091,Sai Ram Tea & Snacks,,,,160.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹160.00) differs from claimed amount (₹405.00) beyond policy tolerance (±₹10)).
 CLM-31094,onmpageye //~ —a]|_ che Ty :ON 21014 - ON here - ume 2 _9DOlLN ma oe = _ Ax.) Lzzv6 w 13 yO ‘puel: qOUaTas avo yound vVIN,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31095,Vidarbha Express Courier,,VX81712845,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31096,New Highway Service S',2026-07-12,901846,,668.11,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
 CLM-31097,Visit Again,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31098,Hotel Pradeep Pure Veg,,OICE,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31102,Shivam Family Restaurant,,OICE,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31098).
-CLM-31105,Sub Total,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31105,Sub Total,,,,2.5,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹2.50) differs from claimed amount (₹567.00) beyond policy tolerance (±₹10)).
 CLM-31106,You. visit again:,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31107,Prompt Parcel Services,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31110,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31111,Sitabuld| Mul,2026-07-16,No,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31112,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31110,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31111,Sitabuld| Mul,2026-07-16,No,,46.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹46.00) differs from claimed amount (₹30.00) beyond policy tolerance (±₹10)).
+CLM-31112,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31115,9E148¢,,,,511.67,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
-CLM-31118,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31118,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31120,Hpcl,2026-06-24,No,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31122,Laxmi Auto Fuels,2026-06-22,003752,,200.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Laxmi Auto Fuels' and bill number '003752' previously claimed in CLM-30762).
-CLM-31123,In: 2,,OICE,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31102).
+CLM-31123,In: 2,,OICE,,210.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31102).
 CLM-31126,Shivam Family Restaurant,,,,210.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
-CLM-31130,Hotel Pradeep Pure Veg,,OICE,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Hotel Pradeep Pure Veg' and bill number 'OICE' previously claimed in CLM-31098).
+CLM-31130,Hotel Pradeep Pure Veg,,OICE,,220.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Hotel Pradeep Pure Veg' and bill number 'OICE' previously claimed in CLM-31098).
 CLM-31132,HPCL M SAT FUEL pc INT TOTAL Rs. 150.00,,,,150.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
 CLM-31133,a B<2re727E2 °C ae VA c Zz < = 5. eg - & z sz ‘4 Z 5 4 - . - > — . 5 4 - Fa $ z 3 Z2 Zz oo o °o °o o,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31137,Spice Route Kitchen,2026-07-15,6221,27NCRPN1784A3Z1,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31137,Spice Route Kitchen,2026-07-15,6221,27NCRPN1784A3Z1,2.5,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹2.50) differs from claimed amount (₹399.00) beyond policy tolerance (±₹10)).
 CLM-31140,; Hi y Bae : o ; g : 2 g = Baie 5 = o¢ on ‘a 2 A 3 x g “§ 2 me 5 a grei’ Re & a : al 4 2 aie : o> 3 g oe ets Se = Cc Bo: | 2 Be z i 2 Maat ry = Best zy @ ~ “aa wn ® | re,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31142,Hotel Rajdhani Dhaba,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31146,Shree Ganesh Tours & Travels,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31148,Hotel Shubham,,OICE,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31130).
+CLM-31142,Hotel Rajdhani Dhaba,,,,1.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹1.00) differs from claimed amount (₹350.00) beyond policy tolerance (±₹10)).
+CLM-31146,Shree Ganesh Tours & Travels,,3916,,3916.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹3916.00) differs from claimed amount (₹470.00) beyond policy tolerance (±₹10)).
+CLM-31148,Hotel Shubham,,OICE,,423.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31130).
 CLM-31152,Al Square P,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31156,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31156,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31158,"' 'RPyawsec ’ é i ' 12aoei aso; Hi vge: ' ‘Susi aan! (Ses! ' | 2 ie ae, 1z£a5} ' ‘ ion: eens t igs at ee LI |. «?, ""4 4 ‘ - $ ' ‘ a z 5: a Be! : 2272 4 ry 7 Beis SE HoH a sf) esis a i i g2:° 5 -F! ’ ae: Bes = i a RA oa! 1 Peps 3é ast ‘ Be 2s 2 . ’ Bn q [3 > ae ‘ Been. 2a { aie e a — «4. a Bs _ ra So} ose +H : ; ge! : oho CO: Suns SSsia: #5: ee ES",,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31160,Speedlink Couriers,2026-07-05,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31161,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31164,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31160,Speedlink Couriers,2026-07-05,,,37.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹37.00) differs from claimed amount (₹339.84) beyond policy tolerance (±₹10)).
+CLM-31161,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31164,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31168,IndianOil,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31170,Spice Route Kitchen,,,,178.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
-CLM-31171,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31171,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31173,Sai Ram Tea & Snacks,2026-07-19,6940,,220.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹220.00) differs from claimed amount (₹330.00) beyond policy tolerance (±₹10)).
-CLM-31176,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31178,Shree Ganesh Tours & Travels,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31182,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31176,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31178,Shree Ganesh Tours & Travels,,3928,,41763.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹41763.00) differs from claimed amount (₹540.00) beyond policy tolerance (±₹10)).
+CLM-31182,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31185,Promel. Parcel Services,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31188,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31190,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31188,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31190,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31191,Shree Sai Petroleum,2026-07-20,007482,,308.69,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
-CLM-31192,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31192,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31195,Cel Services,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31197,Om Sai Fuel Point,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31201,Ashirwad Veg Restau!,2026-07-19,OICE,2701LF01994Z22V,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31148).
+CLM-31201,Ashirwad Veg Restau!,2026-07-19,OICE,2701LF01994Z22V,6380.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31148).
 CLM-31203,Hotel Rajdhani Dhaba,2092-07-22,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31204,Speedlink Couriers,2026-06-24,SL26816175,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Speedlink Couriers' and bill number 'SL26816175' previously claimed in CLM-30703).
-CLM-31206,New Highway Service Station,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31204,Speedlink Couriers,2026-06-24,SL26816175,,24.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Speedlink Couriers' and bill number 'SL26816175' previously claimed in CLM-30703).
+CLM-31206,New Highway Service Station,,00236,,100.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
 CLM-31207,Annapurna,,oIce,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'oIce' previously claimed in CLM-31201).
-CLM-31209,King Dhaba,,1394,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31209,King Dhaba,,1394,,1394.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹1394.00) differs from claimed amount (₹480.00) beyond policy tolerance (±₹10)).
 CLM-31211,Highway King Dhaba,,,,185.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
-CLM-31214,Sai Ram Tea & Snacks,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31214,Sai Ram Tea & Snacks,,,,1.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹1.00) differs from claimed amount (₹100.00) beyond policy tolerance (±₹10)).
 CLM-31217,Shree Ganesh Tours & Travels,,,,6607.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹6607.00) differs from claimed amount (₹660.00) beyond policy tolerance (±₹10)).
 CLM-31221,Prompt Parcel Services,,PP16214660,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31222,Sitabuldi Multilevel Parking,,116051,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31222,Sitabuldi Multilevel Parking,,116051,,116051.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹116051.00) differs from claimed amount (₹30.00) beyond policy tolerance (±₹10)).
 CLM-31225,Receipt No : 603760,2026-07-21,603760,,606.62,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
 CLM-31228,Hpcl :,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31230,Om Sai Fuel Point,2026-07-27,,,150.08,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
 CLM-31233,iULeBe yIsta ‘nok yueyy,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31236,Annapurna Dining Hall,,Item,,483.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
-CLM-31240,Cafe Coffee Corner,,OICE,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31207).
-CLM-31243,Shree Ganesh Tours & Travels,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31240,Cafe Coffee Corner,,OICE,,2.5,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31207).
+CLM-31243,Shree Ganesh Tours & Travels,,4043,,41763.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹41763.00) differs from claimed amount (₹790.00) beyond policy tolerance (±₹10)).
 CLM-31244,aumeubis $48AU0,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31247,TOTAL Rs,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31249,Rbha Express Courier,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31251,Speedlink Couriers,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31255,Sitabuldi Multilevel Parking,2026-07-24,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31256,Ticket No: 2116520,,2116520,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31255,Sitabuldi Multilevel Parking,2026-07-24,116964,,42.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹42.00) differs from claimed amount (₹30.00) beyond policy tolerance (±₹10)).
+CLM-31256,Ticket No: 2116520,,2116520,,33.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
 CLM-31258,Jai Ambe Fuels,2026-07-23,961556,,500.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
-CLM-31261,Shree Sai Petroleum,2026-07-29,007878,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31261,Shree Sai Petroleum,2026-07-29,007878,,64.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹64.00) differs from claimed amount (₹606.91) beyond policy tolerance (±₹10)).
 CLM-31263,Hpcl,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31265,Indianoil,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31266,| Receipt No : 002123,2026-06-13,002123,,300.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number '002123' previously claimed in CLM-30451).
 CLM-31270,Jai Ambe Fuels,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31272,pili No: 6333,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31274,Hotel Pradeep Pure Veg,,,,3.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹3.00) differs from claimed amount (₹693.00) beyond policy tolerance (±₹10)).
-CLM-31275,Shivam Family Restaurant,2026-07-20,OICE,27XMECH9812R2ZH,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Shivam Family Restaurant' and bill number 'OICE' previously claimed in CLM-31102).
+CLM-31272,pili No: 6333,,6333,,2026.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹2026.00) differs from claimed amount (₹331.00) beyond policy tolerance (±₹10)).
+CLM-31274,Hotel Pradeep Pure Veg,,1581,,3.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹3.00) differs from claimed amount (₹693.00) beyond policy tolerance (±₹10)).
+CLM-31275,Shivam Family Restaurant,2026-07-20,OICE,27XMECH9812R2ZH,2.5,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Shivam Family Restaurant' and bill number 'OICE' previously claimed in CLM-31102).
 CLM-31279,GRAND TOTAL Re,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31280,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31284,Hotel Krishna Comforts,2026-07-22,HKC/26-27/5301,27HPFCASESEYAZE,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31280,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31284,Hotel Krishna Comforts,2026-07-22,HKC/26-27/5301,27HPFCASESEYAZE,206.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹206.00) differs from claimed amount (₹2016.00) beyond policy tolerance (±₹10)).
 CLM-31288,Hotel Gulmohar Executive,,OICE,,2352.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31275).
 CLM-31292,Jai Ambe Fuels,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31294,Om Sai Fuel Point,2026-07-22,063661,,54282.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹54282.00) differs from claimed amount (₹542.82) beyond policy tolerance (±₹10)).
 CLM-31296,Shree Sai Petroleum,2026-07-21,007682,,200.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
-CLM-31298,Spice Route Kitchen,,OICE,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31288).
+CLM-31298,Spice Route Kitchen,,OICE,,210.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31288).
 CLM-31299,Ashirwad Veg Restaurant,,,,4.47,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹4.47) differs from claimed amount (₹1472.00) beyond policy tolerance (±₹10)).
 CLM-31301,Amount,,,,790.68,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹790.68) differs from claimed amount (₹735.00) beyond policy tolerance (±₹10)).
 CLM-31305,Royal Travels,,,,900.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹900.00) differs from claimed amount (₹380.00) beyond policy tolerance (±₹10)).
 CLM-31308,"y > TR AVEL S ae 7 7 a) Dawe: _25,/7/9096",,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31310,Shree,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31311,Hotel Gulmohar Executive,,OICE,27PMLCES129S3Z0,2352.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Hotel Gulmohar Executive' and bill number 'OICE' previously claimed in CLM-31288).
-CLM-31314,: Oe,2026-07-29,,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31314,: Oe,2026-07-29,,,16.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹16.00) differs from claimed amount (₹30.00) beyond policy tolerance (±₹10)).
 CLM-31315,] Receipt No : 004980,2026-07-31,004980,,200.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹200.00) differs from claimed amount (₹20.00) beyond policy tolerance (±₹10)).
 CLM-31317,Shirwad Veg Restaurant,,OICE,,2268.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31311).
 CLM-31321,Hotel Pradeep Pure Veg,,OICE,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Hotel Pradeep Pure Veg' and bill number 'OICE' previously claimed in CLM-31130).
-CLM-31324,Hojnalaya,,OICE,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31321).
+CLM-31324,Hojnalaya,,OICE,,2.5,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31321).
 CLM-31328,Highway King Dh Aba,,No,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31329,Shree Ganesh Tol,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31329,Shree Ganesh Tol,,,,41763.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹41763.00) differs from claimed amount (₹740.00) beyond policy tolerance (±₹10)).
 CLM-31331,MAA DU eC AB SE meece,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31333,Om Sai Fuel Point,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31335,Om Sai Fuel Point,,,,313.77,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹313.77) differs from claimed amount (₹1314.00) beyond policy tolerance (±₹10)).
 CLM-31336,Om Sai Fuel Point,2026-07-26,904104,,2607.43,review,Review required: Claim amount (₹2607.43) meets or exceeds ₹2000 high-value threshold; clerk review required
 CLM-31339,Bpcl,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31340,GRE a,,OICE,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31324).
-CLM-31341,Ashirwad Veg Restaurant,2026-07-26,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31344,Highway King Dhaba,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31341,Ashirwad Veg Restaurant,2026-07-26,,,2.5,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹2.50) differs from claimed amount (₹840.00) beyond policy tolerance (±₹10)).
+CLM-31344,Highway King Dhaba,,,,160.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹160.00) differs from claimed amount (₹315.00) beyond policy tolerance (±₹10)).
 CLM-31347,Hotel Rajdhani Dhaba,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31351,Shree Ganesh Tours & Travels,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31352,PRompr PARCEL SERVICES,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31351,Shree Ganesh Tours & Travels,,,,41763.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹41763.00) differs from claimed amount (₹930.00) beyond policy tolerance (±₹10)).
+CLM-31352,PRompr PARCEL SERVICES,,,,929414.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹929414.00) differs from claimed amount (₹141.60) beyond policy tolerance (±₹10)).
 CLM-31356,Sitabuld! Multilevel Parking,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31359,Medical Square Pay & Park,2026-08-01,105547,,20.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
 CLM-31361,Shree Sai Petroleum,,007726,,250.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
 CLM-31362,Time,,,,200.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
-CLM-31363,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31363,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31366,Highw Ay King Dhara,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31367,Vidarbha Express Courier,,,,141.6,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
-CLM-31368,Sai Palace Lodge,,OICE,27GFZCR8659B2Z2,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31340).
+CLM-31368,Sai Palace Lodge,,OICE,27GFZCR8659B2Z2,15.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31340).
 CLM-31369,Om Sai Fuel Point,2026-08-03,004810,,206.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
-CLM-31373,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31374,Hotel Saibaba Bhojnalaya,,6663,27MTSPF4455T1ZB,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31373,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31374,Hotel Saibaba Bhojnalaya,,6663,27MTSPF4455T1ZB,6663.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹6663.00) differs from claimed amount (₹1092.00) beyond policy tolerance (±₹10)).
 CLM-31378,"2Am Ti , & Snack",,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31382,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31382,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31386,Bpcl,,No,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31387,Receipt No 009346,2026-07-28,009346,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31387,Receipt No 009346,2026-07-28,009346,,104.44,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹104.44) differs from claimed amount (₹150.00) beyond policy tolerance (±₹10)).
 CLM-31388,":o, or Zz alt= ns § ‘oe! is fa Pi es & t © a ~ re S esis S "" : : = % 4 Ps H fe) B",,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31391,,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31392,sub Total,,,,1124.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
-CLM-31393,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31397,Punjabi Tadka Dhaba,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31401,Shree Ganesh Tours & Tray},,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31402,Pment 19,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31405,Hotel Shubham,,OICE,27UVQFW9408Y1ZS,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Hotel Shubham' and bill number 'OICE' previously claimed in CLM-31148).
-CLM-31407,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31411,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31412,New Highway Service Station,,002,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31393,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31397,Punjabi Tadka Dhaba,,,,8332.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹8332.00) differs from claimed amount (₹270.00) beyond policy tolerance (±₹10)).
+CLM-31401,Shree Ganesh Tours & Tray},,4032,,4032.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹4032.00) differs from claimed amount (₹1390.00) beyond policy tolerance (±₹10)).
+CLM-31402,Pment 19,,,,19.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹19.00) differs from claimed amount (₹330.40) beyond policy tolerance (±₹10)).
+CLM-31405,Hotel Shubham,,OICE,27UVQFW9408Y1ZS,4200.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Hotel Shubham' and bill number 'OICE' previously claimed in CLM-31148).
+CLM-31407,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31411,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31412,New Highway Service Station,,002,,2.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹2.00) differs from claimed amount (₹300.00) beyond policy tolerance (±₹10)).
 CLM-31414,IndianOil,2026-07-28,009395,,300.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
 CLM-31415,Receij Date: Pump Prodt Rate | Volume Vehiel Mode — OTAL a “i,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31417,G Restaurant,,OICE,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31405).
-CLM-31418,Annapurna Dining Hall,,A/L,27GIZFL1693Q22K,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31421,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31422,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31423,Tilevel Parkin,2026-07-28,no,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31424,Sitabuld! Multilevel Parking,,119915,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31428,Sitabuld! Multilevel Parking,2026-08-03,,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31417,G Restaurant,,OICE,,400.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31405).
+CLM-31418,Annapurna Dining Hall,,A/L,27GIZFL1693Q22K,2.5,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹2.50) differs from claimed amount (₹536.00) beyond policy tolerance (±₹10)).
+CLM-31421,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31422,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31423,Tilevel Parkin,2026-07-28,no,,30.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
+CLM-31424,Sitabuld! Multilevel Parking,,119915,,119915.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹119915.00) differs from claimed amount (₹30.00) beyond policy tolerance (±₹10)).
+CLM-31428,Sitabuld! Multilevel Parking,2026-08-03,119554,,6.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹6.00) differs from claimed amount (₹30.00) beyond policy tolerance (±₹10)).
 CLM-31429,Shree Sai Petroleum,,,,100.0,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
 CLM-31430,Hotel Pradeep Pure Veg,,OICE,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Hotel Pradeep Pure Veg' and bill number 'OICE' previously claimed in CLM-31321).
 CLM-31432,Cafe Coffee Corner,,OICE,,588.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Cafe Coffee Corner' and bill number 'OICE' previously claimed in CLM-31240).
-CLM-31433,Annapurna Dining Hall,,OICE,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31432).
+CLM-31433,Annapurna Dining Hall,,OICE,,2.5,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31432).
 CLM-31436,Shivam Family Restaurant,,OICE,,756.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Shivam Family Restaurant' and bill number 'OICE' previously claimed in CLM-31275).
-CLM-31438,Annapurna Dining Hall,,OICE,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Annapurna Dining Hall' and bill number 'OICE' previously claimed in CLM-31433).
+CLM-31438,Annapurna Dining Hall,,OICE,,220.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Annapurna Dining Hall' and bill number 'OICE' previously claimed in CLM-31433).
 CLM-31439,Sai Ram Tea &,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31440,Highway King Dhaba,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31444,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31447,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31444,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31447,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31451,Date: 04/08,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31453,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31453,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31454,Hpcl,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31457,Hpcl,2026-08-05,904864,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31457,Hpcl,2026-08-05,904864,,104.59,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹104.59) differs from claimed amount (₹400.00) beyond policy tolerance (±₹10)).
 CLM-31460,ee re) 7s Ceo RAER DM: aS3teogea: 8 7S EER ADS S: 2: 22. t ° BeNnor: aad ae zaet Lz) cae oe f ~ ae o>: x 'o 1) EY aewvenew: J Bt : moo: In fi ae 3 DN4@: Be - rnSnuae S 2 a Si we tE> BD ~ 6 Oo x Pe a w °o °o °o °,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31461,Hpcl,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31465,IndianOil,2626-08-04,999478,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31461,Hpcl,,,,300.08,approve,Receipt amount matches the submitted claim; mandatory fields and applicable policy checks passed.
+CLM-31465,IndianOil,2626-08-04,999478,,400.96,review,Review required: bill date differs from submitted expense date beyond tolerance.
 CLM-31469,' oO | \ pO! ro 1 i an 1 ee Bat a a le ageener ae One is ae mE = eat Sees . ee — oo A \ R Tau . 7 ae i's SS ee eS Ole ae MS a Ns Oe a mt SPZa4OnEU NES os Dy 1 Mtns 2 ® “732 Soo - = Ec u a! seeselges; BY eaaaeses2i&,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31473,Spice Route Kitchen,,6567,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31474,Bill ne,,ne,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31475,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31473,Spice Route Kitchen,,6567,,2026.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹2026.00) differs from claimed amount (₹756.00) beyond policy tolerance (±₹10)).
+CLM-31474,Bill ne,,ne,,2.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹2.00) differs from claimed amount (₹746.00) beyond policy tolerance (±₹10)).
+CLM-31475,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31478,CAFE COFFEE Coe,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31479,Cafe Coffee Corner,,OICE,,567.0,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Identical vendor 'Cafe Coffee Corner' and bill number 'OICE' previously claimed in CLM-31432).
 CLM-31480,Amount,,,,790.68,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Receipt image visually identical to previously processed claim CLM-31301).
 CLM-31483,A Dining Hall,,OICE,,,review,Review required: possible duplicate invoice identifier (Possible duplicate invoice: Bill number 'OICE' previously claimed in CLM-31479).
-CLM-31485,Punjabi Tadka Dhaba,,8379,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31485,Punjabi Tadka Dhaba,2096-08-04,8379,,120.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹120.00) differs from claimed amount (₹410.00) beyond policy tolerance (±₹10)).
 CLM-31486,Punjabi Tadka Dhaba,,,,,review,Review required: bill amount could not be extracted reliably from receipt.
 CLM-31490,_ Pare Neg beet SOreiaee,,3551,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31494,Highway King Dhaba,2026-08-05,4433,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31495,Maa Durga Cab Service,2096-08-03,,,,review,Review required: bill amount could not be extracted reliably from receipt.
+CLM-31494,Highway King Dhaba,2026-08-05,4433,,120.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹120.00) differs from claimed amount (₹165.00) beyond policy tolerance (±₹10)).
+CLM-31495,Maa Durga Cab Service,2096-08-03,,,8812.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹8812.00) differs from claimed amount (₹910.00) beyond policy tolerance (±₹10)).
 CLM-31497,"| SHREE GANESH TOURS & 7 VELS — | Sanestpeth, Nagpur | Mob: 98220 41743 x ate } No. ; a E | From: Te so ; Nehicle No: PPS oe ap, J kn: — j Amount Rs, 27525 a | Rupees (in words), ty only | for olf? Trento tad ape a",,,,27525.0,review,Review required: receipt amount differs from the submitted claim (Receipt amount (₹27525.00) differs from claimed amount (₹1170.00) beyond policy tolerance (±₹10)).
-CLM-31501,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31501,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31503,Vidarbha Express Courier,,VX62429997,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31506,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31509,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31512,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31506,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31509,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31512,,,,,,review,Review required: receipt image is unreadable or missing from upload.
 CLM-31516,Sitabuld! Multilevel Parking,,No,,,review,Review required: bill amount could not be extracted reliably from receipt.
-CLM-31519,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
-CLM-31523,,,,,,review,Review required: mandatory verification controls could not be verified automatically.
+CLM-31519,,,,,,review,Review required: receipt image is unreadable or missing from upload.
+CLM-31523,,,,,,review,Review required: receipt image is unreadable or missing from upload.
