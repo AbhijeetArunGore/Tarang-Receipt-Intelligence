@@ -10,7 +10,7 @@ import logging
 import sys
 import time
 from dataclasses import asdict, dataclass, field
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Any, Dict, Optional
 
 
@@ -38,7 +38,7 @@ logger = setup_logger()
 class ProcessingAuditRecord:
     """Structured audit log for every processed receipt and claim."""
     claim_id: str
-    timestamp: str = field(default_factory=lambda: datetime.utcnow().isoformat() + "Z")
+    timestamp: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     provider_name: str = "none"
     model_id: Optional[str] = None
     processing_time_ms: float = 0.0
