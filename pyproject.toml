@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tarang-receipt-intelligence"
+version = "1.0.0"
+description = "Receipt Intelligence and Expense Audit Platform for Tarang Pharma Distribution"
+readme = "README.md"
+authors = [
+    { name = "Abhijeet Arun Gore", email = "goreabhijeet137@gmail.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "pillow>=10.0.0",
+    "opencv-python>=4.8.0",
+    "pytesseract>=0.3.10",
+    "pypdf>=4.0.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.28.0",
+    "streamlit>=1.32.0",
+    "pydantic>=2.6.0",
+    "python-multipart>=0.0.9",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"
