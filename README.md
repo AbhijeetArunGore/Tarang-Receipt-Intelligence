@@ -149,7 +149,7 @@ pytest -v
 
 ### 6.1 Start FastAPI Backend Service
 ```bash
-uvicorn app.api:app --host 0.0.0.0 --port 8000 --reload
+python -m uvicorn app.api:app --host 0.0.0.0 --port 8000 --reload
 ```
 Interactive Swagger documentation available at: `http://localhost:8000/docs`
 
@@ -180,8 +180,10 @@ curl -X POST http://localhost:8000/predict \
 
 ### 6.2 Start Interactive Streamlit UI
 ```bash
-streamlit run app/ui.py
+python -m streamlit run app/ui.py
 ```
+*(Or double-click `run_ui.bat` on Windows)*
+
 Opens interactive dashboard at `http://localhost:8501` featuring receipt upload preview, field comparison, and compliance badges.
 
 ---

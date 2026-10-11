@@ -167,10 +167,10 @@ If a new engineer or finance operator takes over this repository on Monday morni
    ```bash
    pip install -r requirements.txt
    # Verify Tesseract OCR is installed at C:\Users\abhis\AppData\Local\Programs\Tesseract-OCR\tesseract.exe
-   python scripts/predict_batch.py    # Generates predictions.csv
-   pytest -v                          # Runs all 61 automated tests
-   streamlit run app/ui.py            # Launches web testing dashboard
-   uvicorn app.api:app --reload       # Launches FastAPI service on port 8000
+   python scripts/predict_batch.py          # Generates predictions.csv
+   python -m pytest -v                      # Runs all 61 automated tests
+   python -m streamlit run app/ui.py        # Launches web testing dashboard
+   python -m uvicorn app.api:app --reload   # Launches FastAPI service on port 8000
    ```
 2. **How Decisions Are Made (The Safety Invariant):**  
    The system will **never** auto-approve a claim unless: (a) receipt image is resolved, (b) amount matches within ₹10, (c) date is within 3 days, (d) no duplicate invoice exists, and (e) policy limits pass. If any check fails, it safely defaults to `review`.

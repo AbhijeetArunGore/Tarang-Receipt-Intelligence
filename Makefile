@@ -1,7 +1,7 @@
 .PHONY: test audit predict evaluate api ui clean
 
 test:
-	pytest -v
+	python -m pytest -v
 
 audit:
 	python scripts/audit_data.py
@@ -13,10 +13,10 @@ evaluate:
 	python scripts/evaluate.py
 
 api:
-	uvicorn app.api:app --host 0.0.0.0 --port 8000 --reload
+	python -m uvicorn app.api:app --host 0.0.0.0 --port 8000 --reload
 
 ui:
-	streamlit run app/ui.py
+	python -m streamlit run app/ui.py
 
 clean:
 	find . -type d -name "__pycache__" -exec rm -rf {} +
