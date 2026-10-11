@@ -65,3 +65,26 @@ def test_detect_blank_image():
     textured = Image.fromarray(arr)
     is_blank, _ = ImageProcessor.is_blank_or_degraded(textured)
     assert is_blank is False
+
+
+def test_load_pil_image_and_uploaded_file():
+    # Direct PIL image
+    pil_img = Image.new("RGB", (150, 150), color="blue")
+    loaded = ImageProcessor.load_image(pil_img)
+    assert isinstance(loaded, Image.Image)
+    assert loaded.size == (150, 150)
+
+    # Simulated Streamlit UploadedFile
+    class MockUploaded:
+        def __init__(self, data):
+            self.data = data
+        def getvalue(self):
+            return self.data
+
+    buf = io.BytesIO()
+    pil_img.save(buf, format="JPEG")
+    mock_file = MockUploaded(buf.getvalue())
+    loaded_mock = ImageProcessor.load_image(mock_file)
+    assert isinstance(loaded_mock, Image.Image)
+    assert loaded_mock.size == (150, 150)
+

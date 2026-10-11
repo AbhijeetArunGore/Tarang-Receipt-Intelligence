@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import io
 from pathlib import Path
-from typing import Dict, Optional, Tuple, Union
+from typing import Any, Dict, Optional, Tuple, Union
 
 import cv2
 import numpy as np
@@ -32,11 +32,13 @@ class ImageProcessor:
 
     @staticmethod
     def validate_file(
-        image_input: Union[Path, str, bytes, io.BytesIO],
+        image_input: Union[Path, str, bytes, io.BytesIO, Image.Image, Any],
         max_size: int = MAX_FILE_SIZE_BYTES,
     ) -> Tuple[bool, str]:
         """Validate input type, extension, and file size."""
-        if isinstance(image_input, (str, Path)):
+        if isinstance(image_input, Image.Image):
+            return True, "Valid"
+        elif isinstance(image_input, (str, Path)):
             p = Path(image_input)
             if not p.exists():
                 return False, f"Image file not found: {p}"
@@ -48,23 +50,37 @@ class ImageProcessor:
             size = len(image_input) if isinstance(image_input, bytes) else len(image_input.getvalue())
             if size > max_size:
                 return False, f"Upload size exceeds {max_size} bytes limit"
+        elif hasattr(image_input, "getvalue"):
+            val = image_input.getvalue()
+            if len(val) > max_size:
+                return False, f"Upload size exceeds {max_size} bytes limit"
+        elif hasattr(image_input, "read"):
+            return True, "Valid"
         else:
             return False, f"Unsupported image input type: {type(image_input)}"
 
         return True, "Valid"
 
     @classmethod
-    def load_image(cls, image_input: Union[Path, str, bytes, io.BytesIO]) -> Image.Image:
+    def load_image(
+        cls, image_input: Union[Path, str, bytes, io.BytesIO, Image.Image, Any]
+    ) -> Image.Image:
         """Safely load image, validate decodability, and correct EXIF orientation."""
         valid, msg = cls.validate_file(image_input)
         if not valid:
             raise ImageProcessingError(msg)
 
         try:
-            if isinstance(image_input, (str, Path)):
+            if isinstance(image_input, Image.Image):
+                img = image_input.copy()
+            elif isinstance(image_input, (str, Path)):
                 img = Image.open(image_input)
             elif isinstance(image_input, bytes):
                 img = Image.open(io.BytesIO(image_input))
+            elif hasattr(image_input, "getvalue"):
+                img = Image.open(io.BytesIO(image_input.getvalue()))
+            elif hasattr(image_input, "read"):
+                img = Image.open(image_input)
             else:
                 img = Image.open(image_input)
 

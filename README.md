@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.12-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-green)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.32+-red)
-![Tests](https://img.shields.io/badge/Tests-Passing%20(61%2F61)-brightgreen)
+![Tests](https://img.shields.io/badge/Tests-Passing%20(62%2F62)-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
 A production-grade, reproducible receipt intelligence and expense audit platform developed for **Tarang Pharma Distribution** (Nagpur, Maharashtra, India). The system extracts five bill fields from photographed receipts, reconciles values against representative claims and employee records, enforces Tarang Field Expense Policy v3.2, and issues conservative `approve` or `review` decisions.
@@ -139,8 +139,8 @@ python scripts/evaluate.py
 
 ### 5.4 Run Automated Test Suite
 ```bash
-pytest -v
-# Executes all 61 unit and integration tests
+python -m pytest -v
+# Executes all 62 unit and integration tests
 ```
 
 ---

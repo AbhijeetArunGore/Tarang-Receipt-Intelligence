@@ -58,7 +58,7 @@ Based on empirical performance observed across our verified 60-receipt benchmark
 We verified system correctness through empirical, reproducible testing rather than theoretical assumptions:
 1. **Stratified Reference Set (`reports/reference_set.csv`):** Sampled 60 real receipts across all 6 expense categories (Fuel, Food, Lodging, Local travel, Courier, Parking) from historical training data. Transcriptions were independently cross-checked against actual image properties.
 2. **Empirical Evaluation Pipeline (`scripts/evaluate.py`):** Tested the full OCR and policy pipeline on the reference set, generating `reports/metrics.json` and `reports/evaluation.md`.
-3. **Automated Test Suite (61 passing pytest tests):**
+3. **Automated Test Suite (62 passing pytest tests):**
    - Data loading & deterministic image mapping (`tests/test_data.py`)
    - Normalizers for currency, multi-format dates, GSTINs, and strings (`tests/test_normalization.py`)
    - Safe CV loading, orientation fix, and corrupt file rejection (`tests/test_image_processing.py`)
@@ -168,7 +168,7 @@ If a new engineer or finance operator takes over this repository on Monday morni
    pip install -r requirements.txt
    # Verify Tesseract OCR is installed at C:\Users\abhis\AppData\Local\Programs\Tesseract-OCR\tesseract.exe
    python scripts/predict_batch.py          # Generates predictions.csv
-   python -m pytest -v                      # Runs all 61 automated tests
+   python -m pytest -v                      # Runs all 62 automated tests
    python -m streamlit run app/ui.py        # Launches web testing dashboard
    python -m uvicorn app.api:app --reload   # Launches FastAPI service on port 8000
    ```
