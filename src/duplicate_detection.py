@@ -10,7 +10,7 @@ from dataclasses import dataclass
 from typing import Dict, List, Optional, Set, Tuple
 from PIL import Image
 
-from src.observability import logger
+from .observability import logger
 
 
 @dataclass

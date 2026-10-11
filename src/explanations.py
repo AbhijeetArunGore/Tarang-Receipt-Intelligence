@@ -7,8 +7,8 @@ validation and policy findings without exposing sensitive employee PII.
 from __future__ import annotations
 
 from typing import List, Optional
-from src.policy import PolicyCheckSummary
-from src.validation import ValidationResult
+from .policy import PolicyCheckSummary
+from .validation import ValidationResult
 
 
 class ExplanationGenerator:

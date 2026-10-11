@@ -13,16 +13,10 @@ from typing import Any, Dict, List, Optional
 
 import pandas as pd
 
-try:
-    from src.config import AMOUNT_TOLERANCE_ABSOLUTE, DATE_TOLERANCE_DAYS
-    from src.duplicate_detection import DuplicateCheckResult
-    from src.extraction import ExtractedReceipt
-    from src.normalization import normalize_amount, normalize_date
-except (ImportError, ModuleNotFoundError):
-    from config import AMOUNT_TOLERANCE_ABSOLUTE, DATE_TOLERANCE_DAYS  # type: ignore
-    from duplicate_detection import DuplicateCheckResult  # type: ignore
-    from extraction import ExtractedReceipt  # type: ignore
-    from normalization import normalize_amount, normalize_date  # type: ignore
+from .config import AMOUNT_TOLERANCE_ABSOLUTE, DATE_TOLERANCE_DAYS
+from .duplicate_detection import DuplicateCheckResult
+from .extraction import ExtractedReceipt
+from .normalization import normalize_amount, normalize_date
 
 
 class ValidationSeverity(str, Enum):

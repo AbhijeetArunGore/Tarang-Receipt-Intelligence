@@ -9,16 +9,10 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
 
-try:
-    from src.explanations import ExplanationGenerator
-    from src.extraction import ExtractedReceipt
-    from src.policy import ExpensePolicyEngine, PolicyCheckSummary
-    from src.validation import ClaimValidator, ValidationResult
-except (ImportError, ModuleNotFoundError):
-    from explanations import ExplanationGenerator  # type: ignore
-    from extraction import ExtractedReceipt  # type: ignore
-    from policy import ExpensePolicyEngine, PolicyCheckSummary  # type: ignore
-    from validation import ClaimValidator, ValidationResult  # type: ignore
+from .explanations import ExplanationGenerator
+from .extraction import ExtractedReceipt
+from .policy import ExpensePolicyEngine, PolicyCheckSummary
+from .validation import ClaimValidator, ValidationResult
 
 
 ALLOWED_DECISIONS = {"approve", "review"}

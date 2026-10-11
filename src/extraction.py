@@ -10,7 +10,7 @@ import re
 from typing import Dict, List, Optional, Tuple
 from pydantic import BaseModel, Field
 
-from src.normalization import (
+from .normalization import (
     normalize_amount,
     normalize_bill_number,
     normalize_date,
@@ -18,8 +18,8 @@ from src.normalization import (
     validate_gstin,
     GSTIN_REGEX,
 )
-from src.ocr import OCRResult
-from src.observability import logger
+from .ocr import OCRResult
+from .observability import logger
 
 
 class ReceiptFields(BaseModel):

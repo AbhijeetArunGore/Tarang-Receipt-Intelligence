@@ -10,22 +10,13 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any, Dict, List, Optional
 
-try:
-    from src.config import (
-        AMOUNT_AUTO_APPROVE_MAX,
-        FOOD_LIMIT_WITHOUT_APPROVAL,
-        LODGING_LIMIT_M1_M2,
-        LODGING_LIMIT_M3,
-    )
-    from src.extraction import ExtractedReceipt
-except (ImportError, ModuleNotFoundError):
-    from config import (  # type: ignore
-        AMOUNT_AUTO_APPROVE_MAX,
-        FOOD_LIMIT_WITHOUT_APPROVAL,
-        LODGING_LIMIT_M1_M2,
-        LODGING_LIMIT_M3,
-    )
-    from extraction import ExtractedReceipt  # type: ignore
+from .config import (
+    AMOUNT_AUTO_APPROVE_MAX,
+    FOOD_LIMIT_WITHOUT_APPROVAL,
+    LODGING_LIMIT_M1_M2,
+    LODGING_LIMIT_M3,
+)
+from .extraction import ExtractedReceipt
 
 
 class PolicyAction(str, Enum):

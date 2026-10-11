@@ -14,7 +14,7 @@ import cv2
 import numpy as np
 from PIL import Image, ImageOps
 
-from src.observability import logger
+from .observability import logger
 
 ALLOWED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
 MAX_FILE_SIZE_BYTES = 15 * 1024 * 1024  # 15 MB limit
