@@ -1,0 +1,61 @@
+claim_id,emp_id,category,image_file,amount_claimed,ref_vendor,ref_date,ref_bill_number,ref_gstin,ref_amount,truth_decision,historical_status,notes
+CLM-30985,TPD-0497,Food,IMG_20260711_162902.jpg,346.0,Route Spice Kitchen,2026-07-06,6107,27NCRPN1784A3Z1,346.0,approve,approved,Clean bill passed all policy controls
+CLM-30766,TPD-0484,Food,IMG_20260701_090903.jpg,640.0,Saibaba Bhojnalaya,2026-06-30,6416,27MTSPF4455T1ZB,640.0,approve,approved,Clean bill passed all policy controls
+CLM-30829,TPD-0388,Food,IMG_20260704_102036.jpg,888.0,Ashirwad Veg Restaurant,2026-07-01,6127,27OILFO1994Z2ZV,388.0,review,approved,Amount mismatch (claimed 888.0 vs bill 388.0)
+CLM-30833,TPD-0436,Food,/storage/emulated/0/DCIM/Camera/IMG_20260703_171453.jpg,200.0,Hotel Rajdhani Dhaba,2026-07-04,3485,,200.0,approve,approved,Clean bill passed all policy controls
+CLM-30697,TPD-0463,Food,IMG-20260628-WA0014.jpg,210.0,Sai Ram Tea & Snacks,2026-06-24,6906,,210.0,approve,approved,Clean bill passed all policy controls
+CLM-30665,TPD-0412,Food,IMG_20260624_102953.jpg,335.0,Punjabi Tadka Dhaba,2026-06-15,8199,,335.0,approve,approved,Clean bill passed all policy controls
+CLM-30572,TPD-0471,Food,IMG_20260620_212353.jpg,190.0,Sai Ram Tea & Snacks,2026-06-20,6896,,190.0,approve,approved,Clean bill passed all policy controls
+CLM-30693,TPD-0423,Food,IMG_20260628_140015.jpg,861.0,Hotel Pradeep Pure Veg,2026-06-24,1203,27ODUFJ1789K3ZU,861.0,approve,approved,Clean bill passed all policy controls
+CLM-30484,TPD-0436,Food,IMG_20260616_124009.jpg,178.0,Hotel Pradeep Pure Veg,2026-06-12,1130,27ODUFJ1Q89K3ZU,178.0,approve,approved,Clean bill passed all policy controls
+CLM-30412,TPD-0490,Food,IMG_20260608_080820.jpg,330.0,Highway King Dhaba,2026-06-08,1223,,330.0,approve,approved,Clean bill passed all policy controls
+CLM-30819,TPD-0484,Lodging,IMG_20260703_175613.jpg,2016.0,Hotel Krishna Comforts,2026-07-03,HKC/26-27/5240,27HPFCA5856Y3ZE,2016.0,review,approved,"Claim >= Rs 2,000 threshold"
+CLM-30774,TPD-0484,Lodging,IMG-20260701-WA0166.jpg,2016.0,Hotel Krishna Comforts,2026-06-25,HKC/26-27/5205,27H1FCA5856Y3ZE,2016.0,review,approved,"Claim >= Rs 2,000 threshold"
+CLM-30974,TPD-0503,Lodging,IMG-20260709-WA0132.jpg,2016.0,Krisnha Hotel Comforts,2026-07-06,HKC/26-27/5253,27HPFCA5856Y3ZE,2016.0,review,approved,"Claim >= Rs 2,000 threshold"
+CLM-30646,TPD-0478,Lodging,IMG_20260624_185702.jpg,2350.0,Hotel Gulmohar Executive,2026-06-16,HE/26-27/7496,27PMLCE5129S3ZO,2352.0,review,approved,"Claim >= Rs 2,000 threshold"
+CLM-30751,TPD-0471,Lodging,IMG_20260629_170106.jpg,432.0,Hotel Krishna Comforts,2026-06-28,HKC/26-27/5219,27HPFCA5856Y3ZE,4032.0,review,approved,Amount mismatch (claimed 432.0 vs bill 4032.0)
+CLM-30533,TPD-0452,Lodging,IMG_20260618_112339.jpg,2352.0,Hotel Shubham Residency,2026-06-12,HSR/26-27/4873,27UVQFW9408Y1ZS,2352.0,review,approved,"Claim >= Rs 2,000 threshold"
+CLM-30797,TPD-0503,Lodging,IMG-20260701-WA0140.jpg,3136.0,Hotel Centre Point Inn,2026-07-02,HCP/26-27/4602,27BOCPW1223G1Z2,3136.0,review,approved,"Claim >= Rs 2,000 threshold"
+CLM-30492,TPD-0478,Lodging,IMG-20260615-WA0239.jpg,4704.0,HOTEL GULMOHAR EXECUTIVE,2026-06-16,HGE/26-27/7505,27PMLCE5129S3ZO,4704.0,review,approved,"Claim >= Rs 2,000 threshold"
+CLM-30681,TPD-0431,Lodging,IMG_20260625_124513.jpg,6272.0,Centre Point Inn,2026-06-21,HCP/26-27/459,27BOCPW1223G1Z2,6272.0,review,approved,"Claim >= Rs 2,000 threshold"
+CLM-30643,TPD-0484,Lodging,IMG_20260623_203853.jpg,2016.0,HOTEL KRISHNA COMFORTS,2026-06-19,HKC/26-27/5190,27HPFCA5856Y3ZE,2016.0,review,approved,"Claim >= Rs 2,000 threshold"
+CLM-30633,TPD-0452,Fuel,IMG_20260624_121405.jpg,500.0,Laxmi Auto Fuels,2026-06-23,003897,27DPAFU4120X1ZM,500.0,approve,approved,Clean bill passed all policy controls
+CLM-31023,TPD-0452,Fuel,IMG_20260714_160417.jpeg,150.0,LAXMI AUTO FUELS,2026-06-19,003638,27DPAFU4120X1ZM,150.0,approve,approved,Clean bill passed all policy controls
+CLM-30897,TPD-0418,Fuel,IMG_20260708_135744.jpg,300.0,Jai Ambe Fuels,2026-06-30,001087,,300.0,approve,approved,Clean bill passed all policy controls
+CLM-30875,TPD-0463,Fuel,IMG_20260706_192128.jpg,500.0,gajanan petroleum,2026-07-05,009010,,500.0,approve,approved,Clean bill passed all policy controls
+CLM-31016,TPD-0471,Fuel,IMG_20260713_095100.jpg,100.0,New Highway Service Station,2026-07-06,001777,,100.0,approve,approved,Clean bill passed all policy controls
+CLM-30512,TPD-0452,Fuel,IMG_20260618_103234.jpg,400.0,Laxmi Auto Fuels Nagpur,2026-06-12,003440,27DPAFU4120X1ZM,400.0,approve,approved,Clean bill passed all policy controls
+CLM-30451,TPD-0431,Fuel,IMG-20260614-WA0133.jpg,300.0,Om Sai Fuel Point,2026-06-13,002123,,300.0,approve,approved,Clean bill passed all policy controls
+CLM-30549,TPD-0436,Fuel,IMG_20260619_212359.jpg,200.0,Om Sai Fuel Point (Ngp),2026-06-18,002234,,200.0,approve,approved,Clean bill passed all policy controls
+CLM-31026,TPD-0490,Fuel,IMG_20260713_165011.jpg,300.0,SHREE SAI PETROLEUM,2026-07-06,007038,,300.0,approve,approved,Clean bill passed all policy controls
+CLM-30594,TPD-0418,Fuel,IMG_20260622_101042.jpg,300.0,Shree Sai Petroleum,2026-06-19,006595,,300.0,approve,approved,Clean bill passed all policy controls
+CLM-30679,TPD-0431,Courier,IMG-20260626-WA0050.jpg,448.0,vidarbha express courier,2026-06-22,VX11449697,,448.4,approve,approved,Clean bill passed all policy controls
+CLM-30871,TPD-0478,Courier,IMG_20260706_112925.jpg,141.6,Prompt Parcel Services,2026-07-04,PP30275457,27IRWFN4293M2Z1,141.6,approve,approved,Clean bill passed all policy controls
+CLM-30529,TPD-0484,Courier,IMG_20260618_205103.jpg,226.56,Prompt Parcel Services,2026-06-17,PP88026279,27IRWFN4293M2Z1,226.56,approve,approved,Clean bill passed all policy controls
+CLM-30770,TPD-0423,Courier,IMG_20260630_175914.jpg,528.64,vidarbha expreess courier,2026-06-24,VX33212324,27OUUFX7743H2ZR,528.64,approve,approved,Clean bill passed all policy controls
+CLM-31035,TPD-0497,Courier,IMG_20260714_201050.jpg,212.4,express vidarbha courier,2026-07-08,VX38678601,27OUUFX7743H2ZR,212.4,approve,approved,Clean bill passed all policy controls
+CLM-30680,TPD-0447,Courier,IMG_20260625_144518.jpg,530.0,Prompt Parcel Services,2026-06-23,PP26468741,27IRWFN4293M2Z1,528.64,approve,approved,Clean bill passed all policy controls
+CLM-30796,TPD-0423,Courier,IMG_20260701_161359.jpg,339.84,Express Vidarbha Courier (Ngp),2026-06-28,VX35831154,27OUUFX7743H2ZR,339.84,approve,approved,Clean bill passed all policy controls
+CLM-30625,TPD-0431,Courier,IMG_20260623_210019.jpg,330.4,SpeedLink Cour.s (Ngp),2026-06-23,SL36715972,27HJXCW9975D1ZJ,330.4,approve,approved,Clean bill passed all policy controls
+CLM-30937,TPD-0412,Courier,IMG_20260708_122923.jpg,212.4,Vidarbha Express Courier,2026-07-05,VX22516656,,212.4,approve,approved,Clean bill passed all policy controls
+CLM-31066,TPD-0503,Courier,IMG_20260716_143034.jpg,226.56,Express Vidarbha Courier,2026-07-12,VX71480646,27OUUFX7743H2ZR,226.56,approve,approved,Clean bill passed all policy controls
+CLM-30891,TPD-0412,Parking,IMG_20260707_190716.jpg,30.0,Sitabuldi Multilevel Parking,2026-06-30,113846,,30.0,approve,approved,Clean bill passed all policy controls
+CLM-30648,TPD-0412,Parking,/storage/emulated/0/DCIM/Camera/IMG_20260624_141220.jpg,30.0,SITABULDI MULTILEVEL PARKING,2026-06-21,111255,,30.0,approve,approved,Clean bill passed all policy controls
+CLM-31084,TPD-0497,Parking,IMG_20260717_194532.jpg,30.0,Sitabuldi Multilevel Parking,2026-07-10,115179,,30.0,approve,approved,Clean bill passed all policy controls
+CLM-30629,TPD-0431,Parking,IMG_20260622_200133.jpg,30.0,Multilevel Sitabuldi Parking,2026-06-23,112378,,30.0,approve,approved,Clean bill passed all policy controls
+CLM-30494,TPD-0412,Parking,IMG_20260616_095149.jpg,30.0,Sitabuldi Multilevel Parking,2026-06-11,108471,,30.0,approve,approved,Clean bill passed all policy controls
+CLM-30799,TPD-0497,Parking,IMG_20260702_154204.jpg,30.0,Multilevel Sitabuldi Parking,2026-06-19,110914,,30.0,approve,approved,Clean bill passed all policy controls
+CLM-30475,TPD-0497,Parking,IMG_20260615_083022.jpg,30.0,sitabuldi multilevelparking,2026-06-11,107957,,30.0,approve,approved,Clean bill passed all policy controls
+CLM-30916,TPD-0431,Parking,IMG_20260707_110240.jpg,30.0,Sitabuldi Multilevel Parking,2026-07-05,114666,,30.0,approve,approved,Clean bill passed all policy controls
+CLM-30539,TPD-0412,Parking,IMG-20260618-WA0121.jpg,30.0,Sitabuldi Multilevel Parking,2026-06-15,110584,,30.0,approve,approved,Clean bill passed all policy controls
+CLM-30872,TPD-0431,Parking,IMG_20260706_193326.jpg,30.0,Sitabuldi Multilevel Parking,2026-07-02,114424,,30.0,approve,approved,Clean bill passed all policy controls
+CLM-30702,TPD-0388,Local travel,IMG_20260627_205055.jpg,430.0,SHREE GANESH TOURS & TRAVELS,2026-06-28,3755,,430.0,approve,approved,Clean bill passed all policy controls
+CLM-30560,TPD-0447,Local travel,IMG-20260618-WA0179.jpg,500.0,Maa Durga Cab Service,2026-06-15,8235,,500.0,approve,approved,Clean bill passed all policy controls
+CLM-31022,TPD-0388,Local travel,IMG-20260713-WA0111.jpg,1130.0,Shree Ganesh Tours & Travels,2026-07-06,3824,,1130.0,approve,approved,Clean bill passed all policy controls
+CLM-30934,TPD-0447,Local travel,IMG_20260708_142626.jpg,1520.0,ROYAL TRAVELS,2026-07-06,8464,,1020.0,review,approved,Amount mismatch (claimed 1520.0 vs bill 1020.0)
+CLM-30606,TPD-0418,Local travel,IMG_20260621_215742.jpg,1120.0,Shri Ganesh Tours & Travels,2026-06-16,3695,,1120.0,approve,approved,Clean bill passed all policy controls
+CLM-31055,TPD-0388,Local travel,IMG_20260714_213549.jpg,900.0,SHREE GANESH TOURS & TRAVELS,2026-07-12,3871,,900.0,approve,approved,Clean bill passed all policy controls
+CLM-30732,TPD-0431,Local travel,IMG-20260628-WA0048.jpg,700.0,Shree Ganesh Tours & Travels,2026-06-25,3747,,700.0,approve,approved,Clean bill passed all policy controls
+CLM-30790,TPD-0452,Local travel,IMG-20260702-WA0131.jpg,1550.0,Shree Ganesh Tours & Travels,2026-06-23,3741,,1550.0,approve,approved,Clean bill passed all policy controls
+CLM-31053,TPD-0447,Local travel,IMG_20260714_123934.jpg,260.0,Royal Travels,2026-07-07,8467,,260.0,approve,approved,Clean bill passed all policy controls
+CLM-30672,TPD-0431,Local travel,IMG-20260624-WA0019.jpg,1260.0,Shree Ganesh Tours & Travels,2026-06-16,3685,,1260.0,approve,approved,Clean bill passed all policy controls
