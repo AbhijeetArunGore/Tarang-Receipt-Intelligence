@@ -196,6 +196,6 @@ async def predict_claim(
             policy_checks_passed=pol_res.all_passed,
             policy_review_reasons=pol_res.get_review_reasons(),
             ocr_provider=ocr_provider.__class__.__name__,
-            processing_time_ms=round(timer.elapsed_ms, 2),
+            processing_time_ms=round(timer.current_elapsed_ms, 2),
             warnings=warnings,
         )

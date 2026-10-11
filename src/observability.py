@@ -69,6 +69,12 @@ class StopWatch:
         self.start_time: float = 0.0
         self.elapsed_ms: float = 0.0
 
+    @property
+    def current_elapsed_ms(self) -> float:
+        if self.start_time:
+            return (time.perf_counter() - self.start_time) * 1000.0
+        return 0.0
+
     def __enter__(self) -> "StopWatch":
         self.start_time = time.perf_counter()
         return self
